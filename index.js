@@ -86,10 +86,9 @@ var player = new function(){
     if(this.rot <-Math.PI) this.rot =Math.PI;
 
     */
-
     ctx.save();
     ctx.translate(this.x,this.y);
-    ctx.rotate(this.rot);
+    //ctx.rotate(this.rot);
     ctx.drawImage(this.img,-15,-15,30,30);
     ctx.restore();
   }
@@ -98,10 +97,8 @@ var player = new function(){
 var t = 0;
 var speed =0.5;
 var playing = true;
-
 var factor = 0.05
 var k  = {ArrowUp:0,ArrowDown:0,ArrowRight:0,ArrowLeft:0};
-
 
 function loop(){
 
@@ -116,7 +113,7 @@ function loop(){
   ctx.fillStyle = "#FFFF00";
   ctx.fill();
   ctx.beginPath();
-  ctx.fillStyle = "black";
+  ctx.fillStyle = "brown";
   ctx.moveTo(0,c.height);
 
   for (let i = 0; i < c.width; i++)
